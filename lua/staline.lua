@@ -125,7 +125,7 @@ end
 
 M.get_statusline = function(status)
     if conf.disabled_filetypes[vim.bo.ft] ~= nil then
-        return "%#DisabledLine#"
+        return "%#Staline#%=" .. "%="
     end
 
     if conf.special_table[vim.bo.ft] ~= nil then
