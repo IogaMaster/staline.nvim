@@ -43,6 +43,8 @@ return {
         TelescopePrompt = { 'Telescope', "  " },
     },
 
+    disabled_filetypes = { },
+
     mode_colors = {
         ["n"]  = extract_hl("Function"),
         ["c"]  = extract_hl("Identifier"),

@@ -124,6 +124,10 @@ local parse_section = function(section)
 end
 
 M.get_statusline = function(status)
+    if conf.disabled_filetypes[vim.bo.ft] ~= nil then
+        return "%#DisabledLine#"
+    end
+
     if conf.special_table[vim.bo.ft] ~= nil then
         local special = conf.special_table[vim.bo.ft]
         return "%#Staline#%=" .. special[2] .. special[1] .. "%="
